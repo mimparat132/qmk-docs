@@ -39,7 +39,6 @@ sudo apt install qmk
 -   [QMK cli config docs](https://github.com/qmk/qmk_firmware/blob/master/docs/cli_configuration.md#cli-documentation-qmk-config)
 
 ```bash
-cd
 qmk config compile.keyboard=handwired/dactyl_manuform/5x6
 
 # Create a custom keymap file by cloning the default layout directory
