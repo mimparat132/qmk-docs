@@ -46,8 +46,12 @@ cp -r ~/git/qmk_firmware/keyboards/handwired/dactyl_manuform/5x6/keymaps/default
 
 # Modify the keymap.c file to the way you like it
 
-# Set the default keymap compile target
+# These config commands allow you to not have to pass them in at flash or compile time
 qmk config compile.keymap=jacks-layout
+qmk config user.keyboard=handwired/dactyl_manuform/5x6
+qmk config user.keymap=jacks-layout
+qmk config flash.keyboard=handwired/dactyl_manuform/5x6
+
 ```
 
 -   See [QMK keycode docs](https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md) for a complete list of qmk keycodes you can use to make your keymap.
