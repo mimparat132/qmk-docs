@@ -22,17 +22,19 @@ qmk setup
 -   [source for install docs](https://github.com/qmk/qmk_fpm)
 
 ```bash
-# Add the QMK source to your apt repositories list:
-echo "deb https://linux.qmk.fm/ $(lsb_release --codename --short) main" | sudo tee /etc/apt/sources.list.d/qmk.list
+# Install pipx - need it to install qmk since the apt package is no longer
+# maintained/deprecated
 
-# Add the QMK GPG Key:
-wget -qO - https://linux.qmk.fm/gpg_pubkey.txt | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/qmk-gpg-pubkey.gpg > /dev/null
+sudo apt-get install pipx
 
-# Update apt:
-sudo apt update
+# install qmk
 
-# Install QMK:
-sudo apt install qmk
+pipx install qmk
+
+# make sure you add the following path to your path so your system can find
+# applications installed via pipx
+
+export PATH="$HOME/.local/bin:$PATH"
 ```
 
 -   Configure qmk CLI with the target keyboard and keymap file
